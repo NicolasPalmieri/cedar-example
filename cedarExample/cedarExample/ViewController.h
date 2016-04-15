@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MainCardViewCell.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 
 @end

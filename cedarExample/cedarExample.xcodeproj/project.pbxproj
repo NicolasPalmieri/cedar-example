@@ -19,6 +19,8 @@
 		038282C91CC14E5F00500360 /* libCedar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281391CC1407200500360 /* libCedar.a */; };
 		038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
 		038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
+		038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282CF1CC157DF00500360 /* MainCardViewCell.m */; };
+		038282D21CC157DF00500360 /* MainCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038282D01CC157DF00500360 /* MainCardViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -162,8 +164,8 @@
 		038280F11CC13CB900500360 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		038280F31CC13CB900500360 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		038280F41CC13CB900500360 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		038280F61CC13CB900500360 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		038280F71CC13CB900500360 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		038280F61CC13CB900500360 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = cedarExample/ViewController.h; sourceTree = "<group>"; };
+		038280F71CC13CB900500360 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = cedarExample/ViewController.m; sourceTree = "<group>"; };
 		038280FA1CC13CB900500360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		038280FC1CC13CB900500360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		038280FF1CC13CB900500360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -174,6 +176,9 @@
 		038282BF1CC14E3E00500360 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		038282C11CC14E3E00500360 /* Specs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
 		038282C31CC14E3E00500360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038282CE1CC157DF00500360 /* MainCardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCardViewCell.h; sourceTree = "<group>"; };
+		038282CF1CC157DF00500360 /* MainCardViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCardViewCell.m; sourceTree = "<group>"; };
+		038282D01CC157DF00500360 /* MainCardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCardViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +205,8 @@
 		038280E41CC13CB900500360 = {
 			isa = PBXGroup;
 			children = (
+				038282CD1CC157B400500360 /* cells */,
+				038282CC1CC157A500500360 /* controllers */,
 				038281191CC1405900500360 /* externals */,
 				0382810B1CC13E0C00500360 /* specs */,
 				038280EF1CC13CB900500360 /* cedarExample */,
@@ -222,8 +229,6 @@
 			children = (
 				038280F31CC13CB900500360 /* AppDelegate.h */,
 				038280F41CC13CB900500360 /* AppDelegate.m */,
-				038280F61CC13CB900500360 /* ViewController.h */,
-				038280F71CC13CB900500360 /* ViewController.m */,
 				038280F91CC13CB900500360 /* Main.storyboard */,
 				038280FC1CC13CB900500360 /* Assets.xcassets */,
 				038280FE1CC13CB900500360 /* LaunchScreen.storyboard */,
@@ -290,6 +295,25 @@
 				038282C31CC14E3E00500360 /* Info.plist */,
 			);
 			path = Specs;
+			sourceTree = "<group>";
+		};
+		038282CC1CC157A500500360 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				038280F61CC13CB900500360 /* ViewController.h */,
+				038280F71CC13CB900500360 /* ViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		038282CD1CC157B400500360 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				038282CE1CC157DF00500360 /* MainCardViewCell.h */,
+				038282CF1CC157DF00500360 /* MainCardViewCell.m */,
+				038282D01CC157DF00500360 /* MainCardViewCell.xib */,
+			);
+			name = cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -510,6 +534,7 @@
 				038281001CC13CB900500360 /* LaunchScreen.storyboard in Resources */,
 				038280FD1CC13CB900500360 /* Assets.xcassets in Resources */,
 				038280FB1CC13CB900500360 /* Main.storyboard in Resources */,
+				038282D21CC157DF00500360 /* MainCardViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,6 +555,7 @@
 				038280F81CC13CB900500360 /* ViewController.m in Sources */,
 				038280F51CC13CB900500360 /* AppDelegate.m in Sources */,
 				038280F21CC13CB900500360 /* main.m in Sources */,
+				038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
