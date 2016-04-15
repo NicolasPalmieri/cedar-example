@@ -27,6 +27,7 @@
 - (void)setupSubtitleLabel {
     self.descriptionLabel.font = [UIFont fontWithName:@"System" size:14];
     self.descriptionLabel.textColor = [UIColor orangeColor];
+    self.descriptionLabel.numberOfLines = 0;
     self.descriptionLabel.text = self.employee.employeeDescription;
 }
 

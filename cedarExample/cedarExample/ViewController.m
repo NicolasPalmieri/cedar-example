@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.title = @"HELLO-THERE!";
+    
     [self createSomeGlobantEmployeesANDFillArraysWithEm];
     
     UINib *cellNib = [UINib nibWithNibName:@"MainCardViewCell" bundle:nil];
@@ -31,6 +33,8 @@
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor grayColor];
     self.mainTableView.backgroundColor = [UIColor clearColor];
+    self.mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.mainTableView.showsVerticalScrollIndicator = NO;
     self.mainTableView.delegate = self;
     self.mainTableView.dataSource = self;
 }
@@ -55,6 +59,10 @@
 }
 
 #pragma mark - <UITableViewDelegate>
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 110.0f;
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     

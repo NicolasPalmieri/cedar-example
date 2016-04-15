@@ -18,12 +18,11 @@
 		038282C21CC14E3E00500360 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282C11CC14E3E00500360 /* Specs.m */; };
 		038282C91CC14E5F00500360 /* libCedar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281391CC1407200500360 /* libCedar.a */; };
 		038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
-		038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
 		038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282CF1CC157DF00500360 /* MainCardViewCell.m */; };
 		038282D21CC157DF00500360 /* MainCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038282D01CC157DF00500360 /* MainCardViewCell.xib */; };
 		038282D61CC1622000500360 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282D51CC1622000500360 /* Employee.m */; };
-		038282D81CC1688B00500360 /* MainCardViewCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */; };
-		038282DA1CC1689D00500360 /* EmployeeSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D91CC1689D00500360 /* EmployeeSpec.mm */; };
+		038283201CC172E100500360 /* libBlindside-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038283151CC1728700500360 /* libBlindside-StaticLib.a */; };
+		038283211CC1730200500360 /* libBlindside-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038283151CC1728700500360 /* libBlindside-StaticLib.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -160,6 +159,76 @@
 			remoteGlobalIDString = 038280EC1CC13CB900500360;
 			remoteInfo = cedarExample;
 		};
+		0382830C1CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 29CAC6E4150292AD00731862;
+			remoteInfo = Blindside;
+		};
+		0382830E1CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE4864BD1B066F11005DB302;
+			remoteInfo = "Blindside-iOS";
+		};
+		038283101CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34E710AB1B9F85210088AB71;
+			remoteInfo = "Blindside-watchOS";
+		};
+		038283121CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 343267161BAA2A9C005F2D7A;
+			remoteInfo = "Blindside-tvOS";
+		};
+		038283141CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 29997B471505EC0B00C12110;
+			remoteInfo = "Blindside-StaticLib";
+		};
+		038283161CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 29CAC7001502932000731862;
+			remoteInfo = Specs;
+		};
+		038283181CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = AE03FC1A1B0A57DD00013784;
+			remoteInfo = "Blindside-iOS BuildTest";
+		};
+		0382831A1CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34A18BD31B9F887200A65DB3;
+			remoteInfo = "Blindside-watchOS BuildTest";
+		};
+		0382831C1CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34A18BDF1B9F887300A65DB3;
+			remoteInfo = "Blindside-watchOS BuildTest Extension";
+		};
+		0382831E1CC1728700500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 344DA5171BAB042E004270AD;
+			remoteInfo = "Blindside-tvOS BuildTest";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -186,6 +255,8 @@
 		038282D51CC1622000500360 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 		038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainCardViewCellSpec.mm; sourceTree = "<group>"; };
 		038282D91CC1689D00500360 /* EmployeeSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EmployeeSpec.mm; sourceTree = "<group>"; };
+		038282FE1CC1728700500360 /* Blindside.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Blindside.xcodeproj; path = Externals/blindside/Blindside.xcodeproj; sourceTree = "<group>"; };
+		038283231CC1738B00500360 /* SpecHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecHelper.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +264,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038283211CC1730200500360 /* libBlindside-StaticLib.a in Frameworks */,
 				038281551CC140AD00500360 /* Cedar.framework in Frameworks */,
 				038281541CC1408F00500360 /* libCedar.a in Frameworks */,
 			);
@@ -202,6 +274,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038283201CC172E100500360 /* libBlindside-StaticLib.a in Frameworks */,
 				038282C91CC14E5F00500360 /* libCedar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,10 +285,11 @@
 		038280E41CC13CB900500360 = {
 			isa = PBXGroup;
 			children = (
+				038283221CC1736B00500360 /* helpers */,
+				038281191CC1405900500360 /* externals */,
 				038282D31CC161D600500360 /* models */,
 				038282CD1CC157B400500360 /* cells */,
 				038282CC1CC157A500500360 /* controllers */,
-				038281191CC1405900500360 /* externals */,
 				0382810B1CC13E0C00500360 /* specs */,
 				038280EF1CC13CB900500360 /* cedarExample */,
 				038282C01CC14E3E00500360 /* Specs */,
@@ -268,6 +342,7 @@
 		038281191CC1405900500360 /* externals */ = {
 			isa = PBXGroup;
 			children = (
+				038282FE1CC1728700500360 /* Blindside.xcodeproj */,
 				0382811A1CC1407200500360 /* Cedar.xcodeproj */,
 			);
 			name = externals;
@@ -333,6 +408,31 @@
 				038282D51CC1622000500360 /* Employee.m */,
 			);
 			name = models;
+			sourceTree = "<group>";
+		};
+		038282FF1CC1728700500360 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0382830D1CC1728700500360 /* Blindside.framework */,
+				0382830F1CC1728700500360 /* Blindside.framework */,
+				038283111CC1728700500360 /* Blindside.framework */,
+				038283131CC1728700500360 /* Blindside.framework */,
+				038283151CC1728700500360 /* libBlindside-StaticLib.a */,
+				038283171CC1728700500360 /* Specs */,
+				038283191CC1728700500360 /* Blindside-iOS BuildTest.app */,
+				0382831B1CC1728700500360 /* Blindside-watchOS BuildTest.app */,
+				0382831D1CC1728700500360 /* Blindside-watchOS BuildTest Extension.appex */,
+				0382831F1CC1728700500360 /* Blindside-tvOS BuildTest.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		038283221CC1736B00500360 /* helpers */ = {
+			isa = PBXGroup;
+			children = (
+				038283231CC1738B00500360 /* SpecHelper.h */,
+			);
+			name = helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,6 +503,10 @@
 			productRefGroup = 038280EE1CC13CB900500360 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 038282FF1CC1728700500360 /* Products */;
+					ProjectRef = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+				},
 				{
 					ProductGroup = 0382811B1CC1407200500360 /* Products */;
 					ProjectRef = 0382811A1CC1407200500360 /* Cedar.xcodeproj */;
@@ -543,6 +647,76 @@
 			remoteRef = 038281521CC1407200500360 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		0382830D1CC1728700500360 /* Blindside.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Blindside.framework;
+			remoteRef = 0382830C1CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0382830F1CC1728700500360 /* Blindside.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Blindside.framework;
+			remoteRef = 0382830E1CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		038283111CC1728700500360 /* Blindside.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Blindside.framework;
+			remoteRef = 038283101CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		038283131CC1728700500360 /* Blindside.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Blindside.framework;
+			remoteRef = 038283121CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		038283151CC1728700500360 /* libBlindside-StaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libBlindside-StaticLib.a";
+			remoteRef = 038283141CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		038283171CC1728700500360 /* Specs */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = Specs;
+			remoteRef = 038283161CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		038283191CC1728700500360 /* Blindside-iOS BuildTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Blindside-iOS BuildTest.app";
+			remoteRef = 038283181CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0382831B1CC1728700500360 /* Blindside-watchOS BuildTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Blindside-watchOS BuildTest.app";
+			remoteRef = 0382831A1CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0382831D1CC1728700500360 /* Blindside-watchOS BuildTest Extension.appex */ = {
+			isa = PBXReferenceProxy;
+			fileType = "wrapper.app-extension";
+			path = "Blindside-watchOS BuildTest Extension.appex";
+			remoteRef = 0382831C1CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0382831F1CC1728700500360 /* Blindside-tvOS BuildTest.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Blindside-tvOS BuildTest.app";
+			remoteRef = 0382831E1CC1728700500360 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -583,10 +757,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				038282D81CC1688B00500360 /* MainCardViewCellSpec.mm in Sources */,
 				038282C21CC14E3E00500360 /* Specs.m in Sources */,
-				038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */,
-				038282DA1CC1689D00500360 /* EmployeeSpec.mm in Sources */,
 				038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,4 +1,6 @@
 #import <Cedar/Cedar.h>
+#import "SpecHelper.h"
+#import "Blindside.h"
 #import "AppDelegate.h"
 
 using namespace Cedar::Matchers;

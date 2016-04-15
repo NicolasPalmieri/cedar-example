@@ -4,11 +4,13 @@
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "32BF6AB289A4E79447B902560BBC42C536922A7D" : 0,
     "9C17E6AC4A93E78FE05F88AE0011DD4EAD50139D" : 0,
     "60E4C927F74CC7F96D5B72C45195800E29D99CBB" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "89F047B0-935E-4B0E-90F8-9B9C87E4B77A",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "32BF6AB289A4E79447B902560BBC42C536922A7D" : "cedar-example\/cedarExample\/Externals\/blindside\/",
     "9C17E6AC4A93E78FE05F88AE0011DD4EAD50139D" : "cedar-example\/cedarExample\/Externals\/cedar\/",
     "60E4C927F74CC7F96D5B72C45195800E29D99CBB" : "cedar-example\/"
   },
@@ -16,6 +18,11 @@
   "DVTSourceControlWorkspaceBlueprintVersion" : 204,
   "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "cedarExample\/cedarExample.xcodeproj",
   "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/jbsf\/blindside.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "32BF6AB289A4E79447B902560BBC42C536922A7D"
+    },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/NicolasPalmieri\/cedar-example.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
