@@ -10,7 +10,7 @@ describe(@"ViewController", ^{
     __block ViewController *subject;
 
     beforeEach(^{
-
+        subject = [[ViewController alloc] init];
     });
 });
 

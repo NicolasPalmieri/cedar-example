@@ -10,7 +10,7 @@ describe(@"AppDelegate", ^{
     __block AppDelegate *subject;
 
     beforeEach(^{
-
+        subject = [[AppDelegate alloc] init];
     });
 });
 
