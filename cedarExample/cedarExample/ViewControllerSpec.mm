@@ -12,6 +12,10 @@ describe(@"ViewController", ^{
     beforeEach(^{
         subject = [[ViewController alloc] init];
     });
+    
+    it(@"should have a title", ^{
+        subject.title should be_nil;
+    });
 });
 
 SPEC_END

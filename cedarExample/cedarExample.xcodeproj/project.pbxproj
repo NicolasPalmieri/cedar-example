@@ -13,10 +13,12 @@
 		038280FB1CC13CB900500360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038280F91CC13CB900500360 /* Main.storyboard */; };
 		038280FD1CC13CB900500360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038280FC1CC13CB900500360 /* Assets.xcassets */; };
 		038281001CC13CB900500360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038280FE1CC13CB900500360 /* LaunchScreen.storyboard */; };
-		038281081CC13DF700500360 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
-		0382810A1CC13E0200500360 /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
 		038281541CC1408F00500360 /* libCedar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281391CC1407200500360 /* libCedar.a */; };
 		038281551CC140AD00500360 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281331CC1407200500360 /* Cedar.framework */; };
+		038282C21CC14E3E00500360 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282C11CC14E3E00500360 /* Specs.m */; };
+		038282C91CC14E5F00500360 /* libCedar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281391CC1407200500360 /* libCedar.a */; };
+		038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
+		038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,13 @@
 			remoteGlobalIDString = 34D7C4691BB9B71600E8E523;
 			remoteInfo = "Cedar-tvOS SpecBundle";
 		};
+		038282C41CC14E3E00500360 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038280E51CC13CB900500360 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 038280EC1CC13CB900500360;
+			remoteInfo = cedarExample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +171,9 @@
 		038281071CC13DF700500360 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegateSpec.mm; path = cedarExample/AppDelegateSpec.mm; sourceTree = "<group>"; };
 		038281091CC13E0200500360 /* ViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewControllerSpec.mm; path = cedarExample/ViewControllerSpec.mm; sourceTree = "<group>"; };
 		0382811A1CC1407200500360 /* Cedar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Cedar.xcodeproj; path = Externals/cedar/Cedar.xcodeproj; sourceTree = "<group>"; };
+		038282BF1CC14E3E00500360 /* Specs.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Specs.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		038282C11CC14E3E00500360 /* Specs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Specs.m; sourceTree = "<group>"; };
+		038282C31CC14E3E00500360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +186,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		038282BC1CC14E3E00500360 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				038282C91CC14E5F00500360 /* libCedar.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -183,6 +203,7 @@
 				038281191CC1405900500360 /* externals */,
 				0382810B1CC13E0C00500360 /* specs */,
 				038280EF1CC13CB900500360 /* cedarExample */,
+				038282C01CC14E3E00500360 /* Specs */,
 				038280EE1CC13CB900500360 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				038280ED1CC13CB900500360 /* cedarExample.app */,
+				038282BF1CC14E3E00500360 /* Specs.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -261,6 +283,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		038282C01CC14E3E00500360 /* Specs */ = {
+			isa = PBXGroup;
+			children = (
+				038282C11CC14E3E00500360 /* Specs.m */,
+				038282C31CC14E3E00500360 /* Info.plist */,
+			);
+			path = Specs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,6 +312,24 @@
 			productReference = 038280ED1CC13CB900500360 /* cedarExample.app */;
 			productType = "com.apple.product-type.application";
 		};
+		038282BE1CC14E3E00500360 /* Specs */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 038282C61CC14E3E00500360 /* Build configuration list for PBXNativeTarget "Specs" */;
+			buildPhases = (
+				038282BB1CC14E3E00500360 /* Sources */,
+				038282BC1CC14E3E00500360 /* Frameworks */,
+				038282BD1CC14E3E00500360 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				038282C51CC14E3E00500360 /* PBXTargetDependency */,
+			);
+			name = Specs;
+			productName = Specs;
+			productReference = 038282BF1CC14E3E00500360 /* Specs.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -292,6 +341,10 @@
 				TargetAttributes = {
 					038280EC1CC13CB900500360 = {
 						CreatedOnToolsVersion = 7.2;
+					};
+					038282BE1CC14E3E00500360 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 038280EC1CC13CB900500360;
 					};
 				};
 			};
@@ -315,6 +368,7 @@
 			projectRoot = "";
 			targets = (
 				038280EC1CC13CB900500360 /* cedarExample */,
+				038282BE1CC14E3E00500360 /* Specs */,
 			);
 		};
 /* End PBXProject section */
@@ -459,6 +513,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		038282BD1CC14E3E00500360 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -466,15 +527,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0382810A1CC13E0200500360 /* ViewControllerSpec.mm in Sources */,
 				038280F81CC13CB900500360 /* ViewController.m in Sources */,
-				038281081CC13DF700500360 /* AppDelegateSpec.mm in Sources */,
 				038280F51CC13CB900500360 /* AppDelegate.m in Sources */,
 				038280F21CC13CB900500360 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		038282BB1CC14E3E00500360 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				038282C21CC14E3E00500360 /* Specs.m in Sources */,
+				038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */,
+				038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		038282C51CC14E3E00500360 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 038280EC1CC13CB900500360 /* cedarExample */;
+			targetProxy = 038282C41CC14E3E00500360 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		038280F91CC13CB900500360 /* Main.storyboard */ = {
@@ -600,6 +677,30 @@
 			};
 			name = Release;
 		};
+		038282C71CC14E3E00500360 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Specs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Globant.Specs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cedarExample.app/cedarExample";
+			};
+			name = Debug;
+		};
+		038282C81CC14E3E00500360 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Specs/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Globant.Specs;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cedarExample.app/cedarExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -617,6 +718,14 @@
 			buildConfigurations = (
 				038281051CC13CB900500360 /* Debug */,
 				038281061CC13CB900500360 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		038282C61CC14E3E00500360 /* Build configuration list for PBXNativeTarget "Specs" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				038282C71CC14E3E00500360 /* Debug */,
+				038282C81CC14E3E00500360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
