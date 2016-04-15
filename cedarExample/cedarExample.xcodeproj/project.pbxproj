@@ -13,6 +13,8 @@
 		038280FB1CC13CB900500360 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038280F91CC13CB900500360 /* Main.storyboard */; };
 		038280FD1CC13CB900500360 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 038280FC1CC13CB900500360 /* Assets.xcassets */; };
 		038281001CC13CB900500360 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 038280FE1CC13CB900500360 /* LaunchScreen.storyboard */; };
+		038281081CC13DF700500360 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
+		0382810A1CC13E0200500360 /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		038280FC1CC13CB900500360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		038280FF1CC13CB900500360 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		038281011CC13CB900500360 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		038281071CC13DF700500360 /* AppDelegateSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegateSpec.mm; path = cedarExample/AppDelegateSpec.mm; sourceTree = "<group>"; };
+		038281091CC13E0200500360 /* ViewControllerSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ViewControllerSpec.mm; path = cedarExample/ViewControllerSpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +46,7 @@
 		038280E41CC13CB900500360 = {
 			isa = PBXGroup;
 			children = (
+				0382810B1CC13E0C00500360 /* specs */,
 				038280EF1CC13CB900500360 /* cedarExample */,
 				038280EE1CC13CB900500360 /* Products */,
 			);
@@ -77,6 +82,15 @@
 				038280F11CC13CB900500360 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0382810B1CC13E0C00500360 /* specs */ = {
+			isa = PBXGroup;
+			children = (
+				038281071CC13DF700500360 /* AppDelegateSpec.mm */,
+				038281091CC13E0200500360 /* ViewControllerSpec.mm */,
+			);
+			name = specs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0382810A1CC13E0200500360 /* ViewControllerSpec.mm in Sources */,
 				038280F81CC13CB900500360 /* ViewController.m in Sources */,
+				038281081CC13DF700500360 /* AppDelegateSpec.mm in Sources */,
 				038280F51CC13CB900500360 /* AppDelegate.m in Sources */,
 				038280F21CC13CB900500360 /* main.m in Sources */,
 			);
