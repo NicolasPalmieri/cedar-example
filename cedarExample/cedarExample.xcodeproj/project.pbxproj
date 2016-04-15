@@ -21,6 +21,7 @@
 		038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
 		038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282CF1CC157DF00500360 /* MainCardViewCell.m */; };
 		038282D21CC157DF00500360 /* MainCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038282D01CC157DF00500360 /* MainCardViewCell.xib */; };
+		038282D61CC1622000500360 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282D51CC1622000500360 /* Employee.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +180,8 @@
 		038282CE1CC157DF00500360 /* MainCardViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainCardViewCell.h; sourceTree = "<group>"; };
 		038282CF1CC157DF00500360 /* MainCardViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainCardViewCell.m; sourceTree = "<group>"; };
 		038282D01CC157DF00500360 /* MainCardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCardViewCell.xib; sourceTree = "<group>"; };
+		038282D41CC1622000500360 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
+		038282D51CC1622000500360 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,7 @@
 		038280E41CC13CB900500360 = {
 			isa = PBXGroup;
 			children = (
+				038282D31CC161D600500360 /* models */,
 				038282CD1CC157B400500360 /* cells */,
 				038282CC1CC157A500500360 /* controllers */,
 				038281191CC1405900500360 /* externals */,
@@ -314,6 +318,15 @@
 				038282D01CC157DF00500360 /* MainCardViewCell.xib */,
 			);
 			name = cells;
+			sourceTree = "<group>";
+		};
+		038282D31CC161D600500360 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				038282D41CC1622000500360 /* Employee.h */,
+				038282D51CC1622000500360 /* Employee.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +565,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038282D61CC1622000500360 /* Employee.m in Sources */,
 				038280F81CC13CB900500360 /* ViewController.m in Sources */,
 				038280F51CC13CB900500360 /* AppDelegate.m in Sources */,
 				038280F21CC13CB900500360 /* main.m in Sources */,

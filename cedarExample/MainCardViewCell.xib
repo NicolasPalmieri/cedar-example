@@ -59,6 +59,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="cardView" destination="6H7-Ht-gIa" id="AJm-vs-qD6"/>
                 <outlet property="descriptionLabel" destination="1no-ZK-gxQ" id="4w2-BE-ZBU"/>
                 <outlet property="imageIcon" destination="a49-0I-jtS" id="XUn-3o-G5f"/>
                 <outlet property="titleLabel" destination="EGG-BD-HkL" id="vkH-Ml-8rB"/>

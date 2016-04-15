@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "MainCardViewCell.h"
+#import "Employee.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 

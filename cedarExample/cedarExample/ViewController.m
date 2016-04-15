@@ -11,6 +11,8 @@
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *mainTableView;
+@property (strong, nonatomic) NSArray *arrayForFirstSection;
+@property (strong, nonatomic) NSArray *arrayForSecondSection;
 
 @end
 
@@ -20,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self createSomeGlobantEmployeesANDFillArraysWithEm];
     
     UINib *cellNib = [UINib nibWithNibName:@"MainCardViewCell" bundle:nil];
     [self.mainTableView registerNib:cellNib forCellReuseIdentifier:@"MainCardViewCell"];
@@ -42,12 +46,15 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //TODO
-    UITableViewCell *cell = [[UITableViewCell alloc] init];
-    return cell;
+    MainCardViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCardViewCell" forIndexPath:indexPath];
+    if (indexPath.section ==0) {
+        [cell setupWithThisArray:self.arrayForFirstSection[indexPath.row]];
+    } else {
+        [cell setupWithThisArray:self.arrayForSecondSection[indexPath.row]];
+    } return cell;
 }
 
-#pragma mark - DelegateMethods
+#pragma mark - <UITableViewDelegate>
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
@@ -58,12 +65,32 @@
     headerLabel.font = [UIFont fontWithName:@"System" size:14];
     headerLabel.textColor = [UIColor blackColor];
     headerLabel.backgroundColor = [UIColor clearColor];
-    headerLabel.text = (section == 0) ? @"FIRST-SECTION": @"SECOND-SECTION";
+    headerLabel.text = (section == 0) ? @"iOS": @"Android";
     return headerLabel;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - Private
+
+- (void) createSomeGlobantEmployeesANDFillArraysWithEm {
+    Employee *iOS1st = [[Employee alloc] initWithName:@"Nicolas Palmieri"
+                                          description:@"un campeón clase '89"
+                                         profileImage:@"icon_high"];
+    Employee *iOS2nd = [[Employee alloc] initWithName:@"Ezequiel Munz"
+                                          description:@"un loco de por ahi"
+                                         profileImage:@"icon_med"];
+    Employee *android1st = [[Employee alloc] initWithName:@"Fernando Peña"
+                                              description:@"el hombre mas molesto que existe"
+                                             profileImage:@"icon_low"];
+    Employee *android2nd = [[Employee alloc] initWithName:@"Agustin Gugliotta"
+                                              description:@"no llega al metro50"
+                                             profileImage:@"icon_random"];
+    
+    self.arrayForFirstSection = [[NSArray alloc] initWithObjects:iOS1st, iOS2nd, nil];
+    self.arrayForSecondSection = [[NSArray alloc] initWithObjects:android1st, android2nd, nil];
 }
 
 @end
