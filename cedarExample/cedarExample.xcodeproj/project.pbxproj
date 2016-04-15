@@ -22,6 +22,8 @@
 		038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282CF1CC157DF00500360 /* MainCardViewCell.m */; };
 		038282D21CC157DF00500360 /* MainCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038282D01CC157DF00500360 /* MainCardViewCell.xib */; };
 		038282D61CC1622000500360 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282D51CC1622000500360 /* Employee.m */; };
+		038282D81CC1688B00500360 /* MainCardViewCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */; };
+		038282DA1CC1689D00500360 /* EmployeeSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D91CC1689D00500360 /* EmployeeSpec.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -182,6 +184,8 @@
 		038282D01CC157DF00500360 /* MainCardViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainCardViewCell.xib; sourceTree = "<group>"; };
 		038282D41CC1622000500360 /* Employee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Employee.h; sourceTree = "<group>"; };
 		038282D51CC1622000500360 /* Employee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Employee.m; sourceTree = "<group>"; };
+		038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainCardViewCellSpec.mm; sourceTree = "<group>"; };
+		038282D91CC1689D00500360 /* EmployeeSpec.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = EmployeeSpec.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +257,8 @@
 		0382810B1CC13E0C00500360 /* specs */ = {
 			isa = PBXGroup;
 			children = (
+				038282D91CC1689D00500360 /* EmployeeSpec.mm */,
+				038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */,
 				038281071CC13DF700500360 /* AppDelegateSpec.mm */,
 				038281091CC13E0200500360 /* ViewControllerSpec.mm */,
 			);
@@ -577,8 +583,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038282D81CC1688B00500360 /* MainCardViewCellSpec.mm in Sources */,
 				038282C21CC14E3E00500360 /* Specs.m in Sources */,
 				038282CB1CC14E7F00500360 /* AppDelegateSpec.mm in Sources */,
+				038282DA1CC1689D00500360 /* EmployeeSpec.mm in Sources */,
 				038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
