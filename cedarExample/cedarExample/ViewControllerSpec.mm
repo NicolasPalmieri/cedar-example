@@ -21,10 +21,6 @@ describe(@"ViewController", ^{
         subject = [injector getInstance:[ViewController class]];
         subject.view should_not be_nil;
     });
-    
-    it(@"should have a title", ^{
-        subject.title should equal(@"HELLO-THERE");
-    });
 });
 
 SPEC_END

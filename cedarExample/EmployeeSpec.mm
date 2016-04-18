@@ -25,8 +25,39 @@ describe(@"Employee", ^{
                                               profileImage:@"icon_med"];
         });
         
-        it(@"should return true for identical employees", ^{
-            model should equal(otherEmployee);
+        it(@"should create objects of the same class", ^{
+            otherEmployee should be_instance_of([Employee class]);
+        });
+    });
+    
+    describe(@"validating the structure", ^{
+        it(@"should have the correct types", ^{
+            //3 different ways to assert
+            [model.name isKindOfClass:[NSString class]] should be_truthy;
+            [model.employeeDescription isKindOfClass:[NSString class]] should equal(TRUE);
+            [model.employeeProfileImage isKindOfClass:[NSString class]] should equal(YES);
+        });
+        
+        it(@"should have the correct values (viceversa)", ^{
+            //same example
+            [model.name isKindOfClass:[NSString class]] should_not be_falsy;
+            [model.employeeDescription isKindOfClass:[NSString class]] should_not equal(FALSE);
+            [model.employeeProfileImage isKindOfClass:[NSString class]] should_not equal(NO);
+        });
+    });
+    
+    //we can declare a shared-example when the behavior is quite common
+    sharedExamplesFor(@"creating an Employee object", ^(NSDictionary *sharedContext) {
+        [model.name isKindOfClass:[NSString class]] should be_truthy;
+        [model.employeeDescription isKindOfClass:[NSString class]] should equal(TRUE);
+        [model.employeeProfileImage isKindOfClass:[NSString class]] should equal(YES);
+        model should be_instance_of([Employee class]);
+    });
+    
+    //shared-example implementation
+    describe(@"when the behavior is quite common", ^{
+        it(@"should behave like an object of this class", ^{
+            itShouldBehaveLike(@"creating an Employee object");
         });
     });
 });
