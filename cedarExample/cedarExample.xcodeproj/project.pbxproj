@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0359C1691CC50E4F00E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
+		0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
 		038280F21CC13CB900500360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F11CC13CB900500360 /* main.m */; };
 		038280F51CC13CB900500360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F41CC13CB900500360 /* AppDelegate.m */; };
 		038280F81CC13CB900500360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F71CC13CB900500360 /* ViewController.m */; };
@@ -17,7 +19,6 @@
 		038281551CC140AD00500360 /* Cedar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281331CC1407200500360 /* Cedar.framework */; };
 		038282C21CC14E3E00500360 /* Specs.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282C11CC14E3E00500360 /* Specs.m */; };
 		038282C91CC14E5F00500360 /* libCedar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038281391CC1407200500360 /* libCedar.a */; };
-		038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
 		038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282CF1CC157DF00500360 /* MainCardViewCell.m */; };
 		038282D21CC157DF00500360 /* MainCardViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 038282D01CC157DF00500360 /* MainCardViewCell.xib */; };
 		038282D61CC1622000500360 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282D51CC1622000500360 /* Employee.m */; };
@@ -232,6 +233,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0359C1681CC50E4F00E3B8AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		038280ED1CC13CB900500360 /* cedarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cedarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038280F11CC13CB900500360 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		038280F31CC13CB900500360 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */,
 				038283211CC1730200500360 /* libBlindside-StaticLib.a in Frameworks */,
 				038281551CC140AD00500360 /* Cedar.framework in Frameworks */,
 				038281541CC1408F00500360 /* libCedar.a in Frameworks */,
@@ -274,6 +277,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359C1691CC50E4F00E3B8AB /* Foundation.framework in Frameworks */,
 				038283201CC172E100500360 /* libBlindside-StaticLib.a in Frameworks */,
 				038282C91CC14E5F00500360 /* libCedar.a in Frameworks */,
 			);
@@ -282,11 +286,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0359C1881CC50E5500E3B8AB /* frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0359C1681CC50E4F00E3B8AB /* Foundation.framework */,
+			);
+			name = frameworks;
+			sourceTree = "<group>";
+		};
 		038280E41CC13CB900500360 = {
 			isa = PBXGroup;
 			children = (
-				038283221CC1736B00500360 /* helpers */,
+				0359C1881CC50E5500E3B8AB /* frameworks */,
 				038281191CC1405900500360 /* externals */,
+				038283221CC1736B00500360 /* helpers */,
 				038282D31CC161D600500360 /* models */,
 				038282CD1CC157B400500360 /* cells */,
 				038282CC1CC157A500500360 /* controllers */,
@@ -758,7 +771,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				038282C21CC14E3E00500360 /* Specs.m in Sources */,
-				038282CA1CC14E7C00500360 /* ViewControllerSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -939,6 +951,7 @@
 				038281061CC13CB900500360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		038282C61CC14E3E00500360 /* Build configuration list for PBXNativeTarget "Specs" */ = {
 			isa = XCConfigurationList;
@@ -947,6 +960,7 @@
 				038282C81CC14E3E00500360 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

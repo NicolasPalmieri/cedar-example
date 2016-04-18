@@ -6,7 +6,8 @@
 //  Copyright © 2016 Globant. All rights reserved.
 //
 
-#import "Cedar.h"
+#import <Cedar/Cedar.h>
+#import <Blindside/Blindside.h>
 
 @protocol BSInjector;
 @protocol BSBinder;

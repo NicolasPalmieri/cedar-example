@@ -1,10 +1,15 @@
 #import <Cedar/Cedar.h>
 #import "SpecHelper.h"
-#import "Blindside.h"
 #import "ViewController.h"
 
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
+
+@interface ViewController (Spec)
+
+//@property in case needed
+
+@end
 
 SPEC_BEGIN(ViewControllerSpec)
 
@@ -13,9 +18,15 @@ describe(@"ViewController", ^{
     __block id <BSInjector, BSBinder> injector;
 
     beforeEach(^{
+        //helper
         injector = [CDRSpecHelper injector];
-        subject = [[ViewController alloc] init];
         
+        //dependencys
+        [injector bind:[ViewController class] toInstance:subject];
+  
+        //always at the very bottom
+        subject = [injector getInstance:[ViewController class]];
+        subject.view should_not be_nil;
     });
     
     it(@"should have a title", ^{
