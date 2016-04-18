@@ -11,6 +11,10 @@
 		0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
 		0359C18E1CC512F900E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
 		0359C18F1CC5130600E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
+		0359C25F1CC53CD500E3B8AB /* EmployeeSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D91CC1689D00500360 /* EmployeeSpec.mm */; };
+		0359C2601CC53CFF00E3B8AB /* MainCardViewCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */; };
+		0359C2611CC53D0100E3B8AB /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
+		0359C2621CC53D0300E3B8AB /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
 		038280F21CC13CB900500360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F11CC13CB900500360 /* main.m */; };
 		038280F51CC13CB900500360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F41CC13CB900500360 /* AppDelegate.m */; };
 		038280F81CC13CB900500360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F71CC13CB900500360 /* ViewController.m */; };
@@ -29,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		0359C25C1CC53C7E00E3B8AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0382811A1CC1407200500360 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = AE03FBE81B06C33B00013784;
+			remoteInfo = "Cedar-iOS Specs";
+		};
 		038281301CC1407200500360 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0382811A1CC1407200500360 /* Cedar.xcodeproj */;
@@ -154,13 +165,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 34D7C4691BB9B71600E8E523;
 			remoteInfo = "Cedar-tvOS SpecBundle";
-		};
-		038282C41CC14E3E00500360 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 038280E51CC13CB900500360 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 038280EC1CC13CB900500360;
-			remoteInfo = cedarExample;
 		};
 		0382830C1CC1728700500360 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -483,7 +487,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				038282C51CC14E3E00500360 /* PBXTargetDependency */,
+				0359C25D1CC53C7E00E3B8AB /* PBXTargetDependency */,
 			);
 			name = Specs;
 			productName = Specs;
@@ -762,11 +766,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359C25F1CC53CD500E3B8AB /* EmployeeSpec.mm in Sources */,
+				0359C2611CC53D0100E3B8AB /* AppDelegateSpec.mm in Sources */,
 				038282D61CC1622000500360 /* Employee.m in Sources */,
 				038280F81CC13CB900500360 /* ViewController.m in Sources */,
 				038280F51CC13CB900500360 /* AppDelegate.m in Sources */,
 				038280F21CC13CB900500360 /* main.m in Sources */,
 				038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */,
+				0359C2621CC53D0300E3B8AB /* ViewControllerSpec.mm in Sources */,
+				0359C2601CC53CFF00E3B8AB /* MainCardViewCellSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -781,10 +789,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		038282C51CC14E3E00500360 /* PBXTargetDependency */ = {
+		0359C25D1CC53C7E00E3B8AB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 038280EC1CC13CB900500360 /* cedarExample */;
-			targetProxy = 038282C41CC14E3E00500360 /* PBXContainerItemProxy */;
+			name = "Cedar-iOS Specs";
+			targetProxy = 0359C25C1CC53C7E00E3B8AB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
