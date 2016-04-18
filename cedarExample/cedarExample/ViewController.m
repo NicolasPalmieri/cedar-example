@@ -52,9 +52,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MainCardViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCardViewCell" forIndexPath:indexPath];
     if (indexPath.section ==0) {
-        [cell setupWithThisArray:self.arrayForFirstSection[indexPath.row]];
+        [cell setupWithThisObject:self.arrayForFirstSection[indexPath.row]];
     } else {
-        [cell setupWithThisArray:self.arrayForSecondSection[indexPath.row]];
+        [cell setupWithThisObject:self.arrayForSecondSection[indexPath.row]];
     } return cell;
 }
 

@@ -10,7 +10,7 @@
 
 @implementation MainCardViewCell
 
-- (void)setupWithThisArray:(Employee *)specificEmployee {
+- (void)setupWithThisObject:(Employee *)specificEmployee {
     self.employee = specificEmployee;
     
     [self setupNameLabel];

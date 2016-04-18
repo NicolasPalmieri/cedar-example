@@ -17,6 +17,6 @@
 @property (weak, nonatomic) IBOutlet UIView *cardView;
 @property (strong, nonatomic) Employee *employee;
 
-- (void)setupWithThisArray:(NSArray *)array;
+- (void)setupWithThisObject:(Employee *)specificEmployee;
 
 @end
