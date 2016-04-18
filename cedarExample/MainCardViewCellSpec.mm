@@ -1,6 +1,5 @@
 #import <Cedar/Cedar.h>
 #import "SpecHelper.h"
-#import "Blindside.h"
 #import "MainCardViewCell.h"
 
 using namespace Cedar::Matchers;
@@ -10,9 +9,12 @@ SPEC_BEGIN(MainCardViewCellSpec)
 
 describe(@"MainCardViewCell", ^{
     __block MainCardViewCell *subject;
+    __block id <BSInjector, BSBinder> injector;
 
     beforeEach(^{
-        subject = [[MainCardViewCell alloc] init];
+        injector = [CDRSpecHelper injector];
+        
+        subject = [injector getInstance:[MainCardViewCell class]];
     });
 });
 

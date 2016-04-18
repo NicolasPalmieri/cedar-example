@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		0359C1691CC50E4F00E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
 		0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
+		0359C18A1CC5118500E3B8AB /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
+		0359C18E1CC512F900E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
+		0359C18F1CC5130600E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
+		0359C19F1CC51BC700E3B8AB /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
+		0359C1A01CC51BC900E3B8AB /* MainCardViewCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */; };
+		0359C1A11CC51BCB00E3B8AB /* EmployeeSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D91CC1689D00500360 /* EmployeeSpec.mm */; };
 		038280F21CC13CB900500360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F11CC13CB900500360 /* main.m */; };
 		038280F51CC13CB900500360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F41CC13CB900500360 /* AppDelegate.m */; };
 		038280F81CC13CB900500360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F71CC13CB900500360 /* ViewController.m */; };
@@ -266,6 +272,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359C18F1CC5130600E3B8AB /* Blindside.framework in Frameworks */,
 				0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */,
 				038283211CC1730200500360 /* libBlindside-StaticLib.a in Frameworks */,
 				038281551CC140AD00500360 /* Cedar.framework in Frameworks */,
@@ -277,6 +284,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359C18E1CC512F900E3B8AB /* Blindside.framework in Frameworks */,
 				0359C1691CC50E4F00E3B8AB /* Foundation.framework in Frameworks */,
 				038283201CC172E100500360 /* libBlindside-StaticLib.a in Frameworks */,
 				038282C91CC14E5F00500360 /* libCedar.a in Frameworks */,
@@ -770,7 +778,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0359C1A01CC51BC900E3B8AB /* MainCardViewCellSpec.mm in Sources */,
 				038282C21CC14E3E00500360 /* Specs.m in Sources */,
+				0359C19F1CC51BC700E3B8AB /* AppDelegateSpec.mm in Sources */,
+				0359C1A11CC51BCB00E3B8AB /* EmployeeSpec.mm in Sources */,
+				0359C18A1CC5118500E3B8AB /* ViewControllerSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

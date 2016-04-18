@@ -5,12 +5,6 @@
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
-@interface ViewController (Spec)
-
-//@property in case needed
-
-@end
-
 SPEC_BEGIN(ViewControllerSpec)
 
 describe(@"ViewController", ^{
@@ -21,8 +15,7 @@ describe(@"ViewController", ^{
         //helper
         injector = [CDRSpecHelper injector];
         
-        //dependencys
-        [injector bind:[ViewController class] toInstance:subject];
+        //dependencys-binds:
   
         //always at the very bottom
         subject = [injector getInstance:[ViewController class]];
