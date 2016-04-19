@@ -7,7 +7,6 @@ using namespace Cedar::Doubles;
 
 SPEC_BEGIN(MainCardViewCellSpec)
 __block MainCardViewCell *cell;
-__block Employee *fakeEmployee;
 
 describe(@"MainCardViewCell", ^{
     beforeEach(^{
@@ -50,7 +49,6 @@ describe(@"MainCardViewCell", ^{
             it(@"should build a cell", ^{
                 itShouldBehaveLike(@"like a title");
                 itShouldBehaveLike(@"like a subtitle");
-                itShouldBehaveLike(@"like an image being set");
             });
         });
     });

@@ -11,10 +11,6 @@
 		0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
 		0359C18E1CC512F900E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
 		0359C18F1CC5130600E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
-		0359C25F1CC53CD500E3B8AB /* EmployeeSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D91CC1689D00500360 /* EmployeeSpec.mm */; };
-		0359C2601CC53CFF00E3B8AB /* MainCardViewCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */; };
-		0359C2611CC53D0100E3B8AB /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
-		0359C2621CC53D0300E3B8AB /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
 		038280F21CC13CB900500360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F11CC13CB900500360 /* main.m */; };
 		038280F51CC13CB900500360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F41CC13CB900500360 /* AppDelegate.m */; };
 		038280F81CC13CB900500360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F71CC13CB900500360 /* ViewController.m */; };
@@ -30,6 +26,11 @@
 		038282D61CC1622000500360 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 038282D51CC1622000500360 /* Employee.m */; };
 		038283201CC172E100500360 /* libBlindside-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038283151CC1728700500360 /* libBlindside-StaticLib.a */; };
 		038283211CC1730200500360 /* libBlindside-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 038283151CC1728700500360 /* libBlindside-StaticLib.a */; };
+		038F68361CC6B85C009391DC /* EmployeeSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D91CC1689D00500360 /* EmployeeSpec.mm */; };
+		038F68371CC6B85C009391DC /* MainCardViewCellSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038282D71CC1688B00500360 /* MainCardViewCellSpec.mm */; };
+		038F68381CC6B85C009391DC /* AppDelegateSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281071CC13DF700500360 /* AppDelegateSpec.mm */; };
+		038F68391CC6B85C009391DC /* ViewControllerSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 038281091CC13E0200500360 /* ViewControllerSpec.mm */; };
+		038F683A1CC6B873009391DC /* cedarExample.app in Sources */ = {isa = PBXBuildFile; fileRef = 038280ED1CC13CB900500360 /* cedarExample.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,6 +236,20 @@
 			proxyType = 2;
 			remoteGlobalIDString = 344DA5171BAB042E004270AD;
 			remoteInfo = "Blindside-tvOS BuildTest";
+		};
+		038F683B1CC6B888009391DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0382811A1CC1407200500360 /* Cedar.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F45A3C8180E4796003C1E36;
+			remoteInfo = "Cedar-iOS SpecBundle";
+		};
+		038F683D1CC6B895009391DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 038282FE1CC1728700500360 /* Blindside.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 29997B461505EC0B00C12110;
+			remoteInfo = "Blindside-StaticLib";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -487,6 +502,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				038F683E1CC6B895009391DC /* PBXTargetDependency */,
+				038F683C1CC6B888009391DC /* PBXTargetDependency */,
 				0359C25D1CC53C7E00E3B8AB /* PBXTargetDependency */,
 			);
 			name = Specs;
@@ -766,15 +783,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0359C25F1CC53CD500E3B8AB /* EmployeeSpec.mm in Sources */,
-				0359C2611CC53D0100E3B8AB /* AppDelegateSpec.mm in Sources */,
+				038F68361CC6B85C009391DC /* EmployeeSpec.mm in Sources */,
+				038F68371CC6B85C009391DC /* MainCardViewCellSpec.mm in Sources */,
+				038F68381CC6B85C009391DC /* AppDelegateSpec.mm in Sources */,
+				038F68391CC6B85C009391DC /* ViewControllerSpec.mm in Sources */,
 				038282D61CC1622000500360 /* Employee.m in Sources */,
 				038280F81CC13CB900500360 /* ViewController.m in Sources */,
 				038280F51CC13CB900500360 /* AppDelegate.m in Sources */,
 				038280F21CC13CB900500360 /* main.m in Sources */,
 				038282D11CC157DF00500360 /* MainCardViewCell.m in Sources */,
-				0359C2621CC53D0300E3B8AB /* ViewControllerSpec.mm in Sources */,
-				0359C2601CC53CFF00E3B8AB /* MainCardViewCellSpec.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -782,6 +799,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				038F683A1CC6B873009391DC /* cedarExample.app in Sources */,
 				038282C21CC14E3E00500360 /* Specs.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -793,6 +811,16 @@
 			isa = PBXTargetDependency;
 			name = "Cedar-iOS Specs";
 			targetProxy = 0359C25C1CC53C7E00E3B8AB /* PBXContainerItemProxy */;
+		};
+		038F683C1CC6B888009391DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Cedar-iOS SpecBundle";
+			targetProxy = 038F683B1CC6B888009391DC /* PBXContainerItemProxy */;
+		};
+		038F683E1CC6B895009391DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Blindside-StaticLib";
+			targetProxy = 038F683D1CC6B895009391DC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

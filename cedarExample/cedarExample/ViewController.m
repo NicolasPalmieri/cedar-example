@@ -10,7 +10,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UITableView *mainTableView;
 @property (strong, nonatomic) NSArray *arrayForFirstSection;
 @property (strong, nonatomic) NSArray *arrayForSecondSection;
 
@@ -22,21 +21,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     
     self.title = @"HELLO-THERE!";
     
     [self createSomeGlobantEmployeesANDFillArraysWithEm];
     
     UINib *cellNib = [UINib nibWithNibName:@"MainCardViewCell" bundle:nil];
-    [self.mainTableView registerNib:cellNib forCellReuseIdentifier:@"MainCardViewCell"];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier:@"MainCardViewCell"];
     
     self.navigationController.navigationBar.translucent = NO;
     self.view.backgroundColor = [UIColor grayColor];
-    self.mainTableView.backgroundColor = [UIColor clearColor];
-    self.mainTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.mainTableView.showsVerticalScrollIndicator = NO;
-    self.mainTableView.delegate = self;
-    self.mainTableView.dataSource = self;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.showsVerticalScrollIndicator = NO;
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
 #pragma mark - <UITableViewDataSource>
@@ -46,7 +46,11 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 2;
+    if (section == 0) {
+        return self.arrayForFirstSection.count;
+    } else {
+        return self.arrayForSecondSection.count;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -65,14 +69,22 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"heyo!"
+                                                                   message:@"seems you click a row"
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     
+    UIAlertAction *someAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {}];
+    
+    [alert addAction:someAction];
+    [self presentViewController:alert animated:YES completion:nil];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UILabel *headerLabel = [[UILabel alloc]init];
     headerLabel.font = [UIFont fontWithName:@"System" size:14];
-    headerLabel.textColor = [UIColor blackColor];
-    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.textColor = [UIColor whiteColor];
+    headerLabel.textAlignment = NSTextAlignmentCenter;
+    headerLabel.backgroundColor = [UIColor blackColor];
     headerLabel.text = (section == 0) ? @"iOS": @"Android";
     return headerLabel;
 }
@@ -96,9 +108,12 @@
     Employee *android2nd = [[Employee alloc] initWithName:@"Agustin Gugliotta"
                                               description:@"no llega al metro50"
                                              profileImage:@"icon_random"];
+    Employee *android3rd = [[Employee alloc] initWithName:@"Unknown"
+                                              description:@"codea"
+                                             profileImage:@"icon_random"];
     
     self.arrayForFirstSection = [[NSArray alloc] initWithObjects:iOS1st, iOS2nd, nil];
-    self.arrayForSecondSection = [[NSArray alloc] initWithObjects:android1st, android2nd, nil];
+    self.arrayForSecondSection = [[NSArray alloc] initWithObjects:android1st, android2nd, android3rd, nil];
 }
 
 @end
