@@ -16,6 +16,7 @@ SPEC_BEGIN(ViewControllerSpec)
 
 describe(@"ViewController", ^{
     __block ViewController *subject;
+    __block UINavigationController *navigationController;
     __block MainCardViewCell *cell;
     __block Employee *employee1;
     __block Employee *employee2;
@@ -24,7 +25,7 @@ describe(@"ViewController", ^{
     __block Employee *employee5;
     __block NSArray *fakeArray1stSection;
     __block NSArray *fakeArray2ndSection;
-    __block UIAlertController *alert;
+    __block UIAlertController *fakeAlertController;
     __block UIAlertAction *someAction;
     __block UIImage *imageModel1;
     __block UIImage *imageModel2;
@@ -56,11 +57,13 @@ describe(@"ViewController", ^{
         fakeArray1stSection = [[NSArray alloc] initWithObjects:employee1, employee2, nil];
         fakeArray2ndSection = [[NSArray alloc] initWithObjects:employee3, employee4, employee5, nil];
         
-        alert = [UIAlertController alertControllerWithTitle:@"heyo!"
+        fakeAlertController = [UIAlertController alertControllerWithTitle:@"heyo!"
                                                     message:@"seems you click a row"
                                              preferredStyle:UIAlertControllerStyleAlert];
         
         someAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {}];
+        
+        [fakeAlertController addAction:someAction];
         
         imageModel1 = nice_fake_for([UIImage class]);
         imageModel2 = nice_fake_for([UIImage class]);
@@ -69,8 +72,13 @@ describe(@"ViewController", ^{
         //we cannot use the following method for storyboards :(
         //subject = [injector getInstance:[ViewController class]];
         
+        navigationController = [[UINavigationController alloc] init];
+        navigationController.viewControllers = @[subject];
+        spy_on(subject.navigationController);
+        
         //always at the very bottom
         subject.view should_not be_nil;
+        navigationController.topViewController should be_same_instance_as(subject);
     });
     
     it(@"should have a title", ^{
@@ -93,98 +101,120 @@ describe(@"ViewController", ^{
         it(@"should be its table-view datasource", ^{
             subject.tableView.dataSource should be_same_instance_as(subject);
         });
-        
-        describe(@"-numberOfSectionsInTableView:", ^{
-            it(@"should return 2 sections", ^{
-                [subject numberOfSectionsInTableView:subject.tableView] should equal(2);
+    });
+    
+    describe(@"-numberOfSectionsInTableView:", ^{
+        it(@"should return 2 sections", ^{
+            [subject numberOfSectionsInTableView:subject.tableView] should equal(2);
+        });
+    });
+    
+    describe(@"-tableview:numberOfRowsInSection:", ^{
+        context(@"1st section", ^{
+            it(@"should return 2", ^{
+                [subject tableView:subject.tableView numberOfRowsInSection:0] should equal(2);
+                
             });
         });
         
-        describe(@"-tableview:numberOfRowsInSection:", ^{
-            context(@"1st section", ^{
-                it(@"should return 2", ^{
-                    [subject.tableView.dataSource tableView:subject.tableView numberOfRowsInSection:0] should equal(2);
-                  
-                });
+        context(@"2nd section", ^{
+            it(@"should return 3", ^{
+                [subject tableView:subject.tableView numberOfRowsInSection:1] should equal(3);
+            });
+        });
+    });
+    
+    describe(@"-tableView:cellForRowAtIndexPath:", ^{
+        context(@"creating the 1st Employee cell", ^{
+            beforeEach(^{
+                cell = (MainCardViewCell *)[subject tableView:subject.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
+                [cell setupWithThisObject:fakeArray1stSection[0]];
             });
             
-            context(@"2nd section", ^{
-                it(@"should return 3", ^{
-                    [subject.tableView.dataSource tableView:subject.tableView numberOfRowsInSection:1] should equal(3);
-                });
+            it(@"should set the name-label", ^{
+                cell.titleLabel.text should equal(@"first-name");
+            });
+            
+            it(@"should set the subtitle-label", ^{
+                cell.descriptionLabel.text should equal(@"first-description");
             });
         });
         
-        describe(@"-tableView:cellForRowAtIndexPath:", ^{
-            context(@"creating the 1st Employee cell", ^{
-                beforeEach(^{
-                    cell = (MainCardViewCell *)[subject tableView:subject.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0]];
-                    [cell setupWithThisObject:fakeArray1stSection[0]];
-                });
-                
-                it(@"should set the name-label", ^{
-                    cell.titleLabel.text should equal(@"first-name");
-                });
-                
-                it(@"should set the subtitle-label", ^{
-                    cell.descriptionLabel.text should equal(@"first-description");
-                });
+        context(@"creating the 2nd Employee cell", ^{
+            beforeEach(^{
+                cell = (MainCardViewCell *)[subject tableView:subject.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:1]];
+                [cell setupWithThisObject:fakeArray2ndSection[1]];
             });
             
-            context(@"creating the 2nd Employee cell", ^{
-                beforeEach(^{
-                    cell = (MainCardViewCell *)[subject tableView:subject.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:1]];
-                    [cell setupWithThisObject:fakeArray2ndSection[1]];
-                });
-                
-                it(@"should set the name-label", ^{
-                    cell.titleLabel.text should equal(@"fourth-name");
-                });
-                
-                it(@"should set the subtitle-label", ^{
-                    cell.descriptionLabel.text should equal(@"fourth-description");
-                });
+            it(@"should set the name-label", ^{
+                cell.titleLabel.text should equal(@"fourth-name");
+            });
+            
+            it(@"should set the subtitle-label", ^{
+                cell.descriptionLabel.text should equal(@"fourth-description");
+            });
+        });
+    });
+    
+    describe(@"-heightForRowAtIndexPath:", ^{
+        __block CGFloat height;
+        
+        beforeEach(^{
+            height = [subject tableView:subject.tableView heightForRowAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:1]];
+        });
+        
+        it(@"should return the correct value", ^{
+            height should equal(90.0f);
+        });
+    });
+    
+    describe(@"-tableView:didSelectRowAtIndexPath", ^{
+        context(@"a row from the first-section being selected", ^{
+            beforeEach(^{
+                [subject tableView:subject.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForItem:0 inSection:0]];
+            });
+            
+            it(@"should pops an alertView/controller", ^{
+                navigationController should have_received(@selector(presentViewController:animated:completion:));
             });
         });
         
-        describe(@"-tableView:didSelectRowAtIndexPath", ^{
-            __block NSIndexPath *indexPath;
-            __block MainCardViewCell *cell;
-            
-            subjectAction(^{
-                [subject tableView:subject.tableView didSelectRowAtIndexPath:indexPath];
-                
-                //let's pop an alert-view.
-                [alert addAction:someAction];
-                [subject presentViewController:alert animated:YES completion:nil];
+        context(@"a row from the second-section being selected", ^{
+            beforeEach(^{
+                [subject tableView:subject.tableView didSelectRowAtIndexPath:[NSIndexPath indexPathForItem:1 inSection:1]];
             });
             
-            context(@"a row from the first-section being selected", ^{
-                beforeEach(^{
-                    //for the subject action we set the following values
-                    indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
-                    cell.employee = employee1;
-                    subject.tableView stub_method(@selector(cellForRowAtIndexPath:)).with(indexPath).and_return(cell);
-                    spy_on(subject.tableView);
-                });
-                
-                it(@"should pops an alertView/controller", ^{
-                    subject.navigationController.topViewController should be_same_instance_as(alert);
-                });
+            it(@"should pops an alertView", ^{
+                navigationController should have_received(@selector(presentViewController:animated:completion:));
+            });
+        });
+    });
+    
+    describe(@"-viewForHeaderInSection:", ^{
+        __block UILabel *fakeLabel;
+        __block NSInteger section;
+        
+        subjectAction(^{
+            fakeLabel = (UILabel *) [subject tableView:subject.tableView viewForHeaderInSection:section];
+        });
+        
+        context(@"for the 1st-section", ^{
+            beforeEach(^{
+                section = 0;
             });
             
-            context(@"a row from the second-section being selected", ^{
-                beforeEach(^{
-                    //for the subject action we set the following values
-                    indexPath = [NSIndexPath indexPathForItem:0 inSection:0];
-                    cell.employee = employee1;
-                    subject.tableView stub_method(@selector(cellForRowAtIndexPath:)).with(indexPath).and_return(cell);
-                     spy_on(subject.tableView);
-                });
-                
-                it(@"should pops an alertView", ^{
-                    subject.navigationController.topViewController should be_same_instance_as(alert);
-                });
+            it(@"should have the correct text/title", ^{
+                fakeLabel.text should equal(@"iOS");
+            });
+        });
+      
+        context(@"for the 2nd-section", ^{
+            beforeEach(^{
+                section = 1;
+            });
+            
+            it(@"should have the correct text/title", ^{
+                fakeLabel.text should equal(@"Android");
             });
         });
     });

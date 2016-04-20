@@ -7,6 +7,7 @@
 //
 
 #import "MainCardViewCell.h"
+#import "UIColor+CE.h"
 
 @implementation MainCardViewCell
 
@@ -20,13 +21,13 @@
 
 - (void)setupNameLabel {
     self.titleLabel.font = [UIFont fontWithName:@"System" size:18];
-    self.titleLabel.textColor = [UIColor greenColor];
+    self.titleLabel.textColor = [UIColor thatGreenTho];
     self.titleLabel.text = self.employee.name;
 }
 
 - (void)setupSubtitleLabel {
     self.descriptionLabel.font = [UIFont fontWithName:@"System" size:14];
-    self.descriptionLabel.textColor = [UIColor orangeColor];
+    self.descriptionLabel.textColor = [UIColor thisOrange];
     self.descriptionLabel.numberOfLines = 0;
     self.descriptionLabel.text = self.employee.employeeDescription;
 }

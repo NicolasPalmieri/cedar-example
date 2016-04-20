@@ -11,6 +11,7 @@
 		0359C1891CC50F9900E3B8AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0359C1681CC50E4F00E3B8AB /* Foundation.framework */; };
 		0359C18E1CC512F900E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
 		0359C18F1CC5130600E3B8AB /* Blindside.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0382830F1CC1728700500360 /* Blindside.framework */; };
+		03698C061CC7CD6E00C2E0D5 /* UIColor+CE.m in Sources */ = {isa = PBXBuildFile; fileRef = 03698C051CC7CD6E00C2E0D5 /* UIColor+CE.m */; };
 		038280F21CC13CB900500360 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F11CC13CB900500360 /* main.m */; };
 		038280F51CC13CB900500360 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F41CC13CB900500360 /* AppDelegate.m */; };
 		038280F81CC13CB900500360 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 038280F71CC13CB900500360 /* ViewController.m */; };
@@ -255,6 +256,8 @@
 
 /* Begin PBXFileReference section */
 		0359C1681CC50E4F00E3B8AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		03698C041CC7CD6E00C2E0D5 /* UIColor+CE.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+CE.h"; sourceTree = "<group>"; };
+		03698C051CC7CD6E00C2E0D5 /* UIColor+CE.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+CE.m"; sourceTree = "<group>"; };
 		038280ED1CC13CB900500360 /* cedarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cedarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		038280F11CC13CB900500360 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		038280F31CC13CB900500360 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -467,6 +470,8 @@
 			isa = PBXGroup;
 			children = (
 				038283231CC1738B00500360 /* SpecHelper.h */,
+				03698C041CC7CD6E00C2E0D5 /* UIColor+CE.h */,
+				03698C051CC7CD6E00C2E0D5 /* UIColor+CE.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -784,6 +789,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				038F68361CC6B85C009391DC /* EmployeeSpec.mm in Sources */,
+				03698C061CC7CD6E00C2E0D5 /* UIColor+CE.m in Sources */,
 				038F68371CC6B85C009391DC /* MainCardViewCellSpec.mm in Sources */,
 				038F68381CC6B85C009391DC /* AppDelegateSpec.mm in Sources */,
 				038F68391CC6B85C009391DC /* ViewControllerSpec.mm in Sources */,

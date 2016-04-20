@@ -22,15 +22,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    
     self.title = @"HELLO-THERE!";
     
     [self createSomeGlobantEmployeesANDFillArraysWithEm];
     
     UINib *cellNib = [UINib nibWithNibName:@"MainCardViewCell" bundle:nil];
     [self.tableView registerNib:cellNib forCellReuseIdentifier:@"MainCardViewCell"];
-    
+
     self.navigationController.navigationBar.translucent = NO;
+    
     self.view.backgroundColor = [UIColor grayColor];
     self.tableView.backgroundColor = [UIColor clearColor];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -46,26 +46,36 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
-        return self.arrayForFirstSection.count;
-    } else {
-        return self.arrayForSecondSection.count;
-    }
+    NSInteger count;
+    switch (section) {
+        case 0:
+            count = self.arrayForFirstSection.count;
+            break;
+        case 1:
+            count = self.arrayForSecondSection.count;
+        default:
+            break;
+    } return count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     MainCardViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MainCardViewCell" forIndexPath:indexPath];
-    if (indexPath.section ==0) {
-        [cell setupWithThisObject:self.arrayForFirstSection[indexPath.row]];
-    } else {
-        [cell setupWithThisObject:self.arrayForSecondSection[indexPath.row]];
+    switch (indexPath.section) {
+        case 0:
+            [cell setupWithThisObject:self.arrayForFirstSection[indexPath.row]];
+            break;
+        case 1:
+            [cell setupWithThisObject:self.arrayForSecondSection[indexPath.row]];
+            break;
+        default:
+            break;
     } return cell;
 }
 
 #pragma mark - <UITableViewDelegate>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 110.0f;
+    return 90.0f;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -76,7 +86,7 @@
     UIAlertAction *someAction = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {}];
     
     [alert addAction:someAction];
-    [self presentViewController:alert animated:YES completion:nil];
+    [self.navigationController presentViewController:alert animated:YES completion:nil];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -89,28 +99,24 @@
     return headerLabel;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 #pragma mark - Private
 
 - (void) createSomeGlobantEmployeesANDFillArraysWithEm {
     Employee *iOS1st = [[Employee alloc] initWithName:@"Nicolas Palmieri"
                                           description:@"un campeón clase '89"
-                                         profileImage:@"icon_high"];
+                                         profileImage:@"icon_apple"];
     Employee *iOS2nd = [[Employee alloc] initWithName:@"Ezequiel Munz"
                                           description:@"un loco de por ahi"
-                                         profileImage:@"icon_med"];
+                                         profileImage:@"icon_apple"];
     Employee *android1st = [[Employee alloc] initWithName:@"Fernando Peña"
                                               description:@"el hombre mas molesto que existe"
-                                             profileImage:@"icon_low"];
+                                             profileImage:@"icon_android"];
     Employee *android2nd = [[Employee alloc] initWithName:@"Agustin Gugliotta"
                                               description:@"no llega al metro50"
-                                             profileImage:@"icon_random"];
+                                             profileImage:@"icon_android"];
     Employee *android3rd = [[Employee alloc] initWithName:@"Unknown"
                                               description:@"codea"
-                                             profileImage:@"icon_random"];
+                                             profileImage:@"icon_android"];
     
     self.arrayForFirstSection = [[NSArray alloc] initWithObjects:iOS1st, iOS2nd, nil];
     self.arrayForSecondSection = [[NSArray alloc] initWithObjects:android1st, android2nd, android3rd, nil];

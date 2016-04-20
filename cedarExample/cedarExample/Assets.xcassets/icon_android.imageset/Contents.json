@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "icon_challenges_steps_@1x.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cholesterol@2x.png",
+      "filename" : "icon_challenges_steps_@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "icon_challenges_steps_@3x.png",
       "scale" : "3x"
     }
   ],

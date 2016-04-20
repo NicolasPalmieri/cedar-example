@@ -15,7 +15,6 @@ describe(@"AppDelegate", ^{
     beforeEach(^{
         subject = [[AppDelegate alloc] init];
         injector = [CDRSpecHelper injector];
-        //injector = (id)subject.injector;
         
         application = nice_fake_for([UIApplication class]);
         
