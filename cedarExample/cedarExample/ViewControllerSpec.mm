@@ -74,7 +74,7 @@ describe(@"ViewController", ^{
         
         navigationController = [[UINavigationController alloc] init];
         navigationController.viewControllers = @[subject];
-        spy_on(subject.navigationController);
+        spy_on(navigationController);
         
         //always at the very bottom
         subject.view should_not be_nil;
@@ -113,7 +113,6 @@ describe(@"ViewController", ^{
         context(@"1st section", ^{
             it(@"should return 2", ^{
                 [subject tableView:subject.tableView numberOfRowsInSection:0] should equal(2);
-                
             });
         });
         
