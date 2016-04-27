@@ -101,6 +101,14 @@ describe(@"ViewController", ^{
         it(@"should be its table-view datasource", ^{
             subject.tableView.dataSource should be_same_instance_as(subject);
         });
+        
+        it(@"should have the background color setted to clear", ^{
+            subject.tableView.backgroundColor should equal([UIColor clearColor]);
+        });
+        
+        it(@"should have the separator-style as none", ^{
+            subject.tableView.separatorStyle should equal(UITableViewCellSeparatorStyleNone);
+        });
     });
     
     describe(@"-numberOfSectionsInTableView:", ^{

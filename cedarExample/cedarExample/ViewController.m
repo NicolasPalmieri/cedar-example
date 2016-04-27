@@ -106,13 +106,13 @@
                                           description:@"un campeón clase '89"
                                          profileImage:@"icon_apple"];
     Employee *iOS2nd = [[Employee alloc] initWithName:@"Ezequiel Munz"
-                                          description:@"un loco de por ahi"
+                                          description:@"random-description"
                                          profileImage:@"icon_apple"];
     Employee *android1st = [[Employee alloc] initWithName:@"Fernando Peña"
-                                              description:@"el hombre mas molesto que existe"
+                                              description:@"padre, 1 hijo."
                                              profileImage:@"icon_android"];
     Employee *android2nd = [[Employee alloc] initWithName:@"Agustin Gugliotta"
-                                              description:@"no llega al metro50"
+                                              description:@"estatura-baja"
                                              profileImage:@"icon_android"];
     Employee *android3rd = [[Employee alloc] initWithName:@"Unknown"
                                               description:@"codea"
